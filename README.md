@@ -10,11 +10,11 @@ LingView now supports .flextext files as source documents. (Flextext is the form
 ### Linux and macOS
 If you're using Linux or macOS, installing LingView is easy! If you're on Linux, paste this into your terminal:
 ```
-curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/raw | bash
+curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/raw -o install_lingview.sh && chmod +x install_lingview.sh && ./install_lingview.sh
 ```
 If you're using macOS, open up your terminal by pressing `command + space` and typing in **Terminal**. Then paste in this script:
 ```
-curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/raw -o 'install.command' && ./install.command
+curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/raw -o 'install.command' && chmod +x install_lingview.command && ./install.command
 ```
 This will install LingView to your `~/Documents` directory. To launch LingView, click on the `lingview.sh` or `lingview.command` file on your desktop and the website should launch.
 
