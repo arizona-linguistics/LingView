@@ -16,7 +16,7 @@ If you're using macOS, open up your terminal by pressing `command + space` and t
 ```
 curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/ -o 'install.command' && ./install.command
 ```
-This will install LingView to your `~/Documents` directory. To launch LingView, click on the `lingview.sh` or `lingview.command` and the website should launch.
+This will install LingView to your `~/Documents` directory. To launch LingView, click on the `lingview.sh` or `lingview.command` file on your desktop and the website should launch.
 
 ### Windows
 Installing LingView on Windows is a bit more complicated. We're working on an install script for Windows, but in the meantime, you'll need to have NPM and Node.js installed. Download and run the installer from [NodeJs.org](https://nodejs.org/). Then, clone this repository and run the command:
