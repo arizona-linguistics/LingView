@@ -7,7 +7,19 @@ Front-end code written with [ReactJS](https://reactjs.org/).
 LingView now supports .flextext files as source documents. (Flextext is the format used for exporting a file from ELAN to FLEx or vice versa.) The new format can include timing information and can therefore be displayed with synced audio/video. To start using .flextext files, [update LingView](https://github.com/BrownCLPS/LingView/wiki/Update-LingView).
 
 ## Getting Started
-To begin using this site, you'll need to have NPM and Node.js installed. Download and run the installer from [NodeJs.org](https://nodejs.org/). Then, clone this repository and run the command:
+### Linux and macOS
+If you're using Linux or macOS, installing LingView is easy! If you're on Linux, paste this into your terminal:
+```
+curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/ | bash
+```
+If you're using macOS, open up your terminal by pressing `command + space` and typing in **Terminal**. Then paste in this script:
+```
+curl https://gist.githubusercontent.com/caminante-blanco/86c6a9e2a1bad9e760ec5159797eb96c/ -o 'install.command' && ./install.command
+```
+This will install LingView to your `~/Documents` directory. To launch LingView, click on the `lingview.sh` or `lingview.command` and the website should launch.
+
+### Windows
+Installing LingView on Windows is a bit more complicated. We're working on an install script for Windows, but in the meantime, you'll need to have NPM and Node.js installed. Download and run the installer from [NodeJs.org](https://nodejs.org/). Then, clone this repository and run the command:
     `npm install`
     
 This will install all the node modules required by our program. 
