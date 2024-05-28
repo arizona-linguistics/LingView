@@ -1,13 +1,13 @@
 #!/bin/bash
 
-repo_url="https://github.com/arizona-linguistics/tukanoan-lingview/archive/refs/heads/master.zip"
+repo_url="https://github.com/arizona-linguistics/LingView/archive/refs/heads/master.zip"
 
 # Download the repository
 cd ~/Downloads
-curl -L $repo_url -o tukanoan-lingview.zip
-unzip -q tukanoan-lingview.zip -d "$HOME/Documents"
-rm tukanoan-lingview.zip
-cd "$HOME/Documents/tukanoan-lingview-master"
+curl -L $repo_url -o lingview.zip
+unzip -q lingview.zip -d "$HOME/Documents"
+rm lingview.zip
+cd "$HOME/Documents/lingview-master"
 
 # Install dependencies
 if ! which nvm >/dev/null; then
@@ -23,10 +23,14 @@ npm install
 # Build the project
 npm run quick-build
 
+cp scripts/lingview.sh
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
     open index.html
+    cp scripts/lingview.command $HOME/Desktop
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     xdg-open index.html
+    cp scripts/lingview.sh $HOME/Desktop
 fi
 
 exit 0
