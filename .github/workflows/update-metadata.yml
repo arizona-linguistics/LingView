@@ -1,0 +1,42 @@
+name: Update Metadata
+
+on:
+  push:
+    branches:
+      - master
+      # This action really only cares about the /data directory, but that wasn't working
+    paths-ignore: 
+      - 'data/metadata.yaml'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1.4.4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Run update_metadata.js
+        run: |
+          npm ci
+          npm run quick-build
+          node preprocessing/update_metadata.js
+        env:
+          CI: true
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
+          git pull origin
+          git add .
+          git commit -m "Updated metadata"
+          git push origin master
