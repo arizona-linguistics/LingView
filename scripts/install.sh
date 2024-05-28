@@ -27,10 +27,10 @@ cp scripts/lingview.sh
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
     open index.html
-    cp scripts/lingview.command $HOME/Desktop
+    cp ./scripts/lingview.command "$HOME/Desktop"
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     xdg-open index.html
-    cp scripts/lingview.sh $HOME/Desktop
+    cp ./scripts/lingview.sh "$HOME/Desktop"
 fi
 
 exit 0
